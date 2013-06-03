@@ -1,0 +1,43 @@
+/*
+Theme Name: RapidDevKit Sample Theme
+Theme URI: http://www.philipjoyner.com
+Description: This theme shows how the plugin is called. Not necessary to use the plugin.
+Author: Philip Joyner
+Author URI: http://www.philipjoyner.com
+Version: 1.0
+Tags: Start Theme, basic markup
+*/
+
+
+/*
+--------------------------------------------------------------------------------------------
+STYLES
+--------------------------------------------------------------------------------------------
+*/
+.clear { clear: both; }
+
+h1 span { font-style: italic; }
+
+.post { padding-bottom: 30px; }
+.more-link { display: block; padding: 5px 0; }
+#nav-below { margin-top: -30px; }
+
+.alignleft { float: left; }
+img.alignleft { padding: 0 10px 10px 0; }
+.alignright { float: right; }
+img.alignright { padding: 0 0 10px 10px; }
+
+#author-avatar { float: left; padding: 0 15px 10px 0; }
+
+#comments ol.commentlist li { padding: 15px 0; }
+#comments ol.commentlist li li { padding: 25px 0; }
+#comments .avatar { float: left; padding: 0 10px 10px 0; }
+#comments p { clear: left; }
+#respond label { display: inline; }
+#respond span.required { display: inline; color: red; }
+#respond input[type=text], #respond textarea { display: block; }
+/*
+--------------------------------------------------------------------------------------------
+END STYLES
+--------------------------------------------------------------------------------------------
+*/
