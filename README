@@ -1,0 +1,3 @@
+RapidDevKit is shaping up to be a replacement for WpApp removing the complexity of configuration and packing the most used functionality into a plugin.
+
+This version is barely an alpha as it has not been tested thoroughly nor has it be used on a Linux web server. Alpha may actually be too generous.
