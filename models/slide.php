@@ -9,7 +9,7 @@ class Slide extends Model {
 		// post type creation
 		$this->create_post_type($this->post_type, 'Slide', 'Slides', 'page', array(
 			'exclude_from_search' => true,
-			'supports' => array('title', 'editor', 'custom-fields')
+			'supports' => array('title', 'custom-fields')
 		));
 	}
 	

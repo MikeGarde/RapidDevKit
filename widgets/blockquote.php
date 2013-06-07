@@ -2,16 +2,16 @@
 /*
  * Subpage List widget
  */
-class RDXBlockquoteWidget extends WP_Widget {
+class RDKBlockquoteWidget extends WP_Widget {
 	/**
 	 * Construction method for adding widget to the WordPress admin.
 	 */
-	function RDXBlockquoteWidget() {
+	function RDKBlockquoteWidget() {
 		$widget_ops = array(
-			'classname' => 'rdx_blockquote_widget',
-			'description' => __("Display a blockquote", 'rdx_blockquote_widget')
+			'classname' => 'rdk_blockquote_widget',
+			'description' => __("Display a blockquote", 'rdk_blockquote_widget')
 		);
-		$this->WP_Widget('rdx_blockquote', __('RDX Blockquote', 'rdx_blockquote_widget'), $widget_ops);
+		$this->WP_Widget('rdk_blockquote', __('RDK Blockquote', 'rdk_blockquote_widget'), $widget_ops);
 	}
 	
 	/**
@@ -107,12 +107,12 @@ class RDXBlockquoteWidget extends WP_Widget {
 
 
 /*
- * Register the RDX Subpage List Widget
+ * Register the RDK Subpage List Widget
  */
-if(!function_exists('rdx_blockquote_widget_register')) {
-	function rdx_blockquote_widget_register() {
-		if(class_exists('RDXBlockquoteWidget')) register_widget('RDXBlockquoteWidget');
+if(!function_exists('rdk_blockquote_widget_register')) {
+	function rdk_blockquote_widget_register() {
+		if(class_exists('RDKBlockquoteWidget')) register_widget('RDKBlockquoteWidget');
 	}
 	
-	add_action("widgets_init", 'rdx_blockquote_widget_register');
+	add_action("widgets_init", 'rdk_blockquote_widget_register');
 }

@@ -2,16 +2,16 @@
 /*
  * Subpage List widget
  */
-class RDXSubpageWidget extends WP_Widget {
+class RDKSubpageWidget extends WP_Widget {
 	/**
 	 * Construction method for adding widget to the WordPress admin.
 	 */
-	function RDXSubpageWidget() {
+	function RDKSubpageWidget() {
 		$widget_ops = array(
-			'classname' => 'rdx_subpage_list_widget',
-			'description' => __("Display the subpages of the current page", 'rdx_subpage_list_widget')
+			'classname' => 'rdk_subpage_list_widget',
+			'description' => __("Display the subpages of the current page", 'rdk_subpage_list_widget')
 		);
-		$this->WP_Widget('rdx_subpage_list', __('RDX Subpage List', 'rdx_subpage_list_widget'), $widget_ops);
+		$this->WP_Widget('rdk_subpage_list', __('RDK Subpage List', 'rdk_subpage_list_widget'), $widget_ops);
 	}
 	
 	/**
@@ -27,7 +27,7 @@ class RDXSubpageWidget extends WP_Widget {
 		
 		echo $before_widget;
 		if($title) echo $before_title . $title . $after_title;
-		echo '<ul class="subpage_list">' . $rdk->subpage_list() . '</ul>';
+		echo '<ul class="subpage_list">' . $rdk->Tool->subpage_list() . '</ul>';
 		echo $after_widget;
 	}
 	
@@ -71,12 +71,12 @@ class RDXSubpageWidget extends WP_Widget {
 
 
 /*
- * Register the RDX Subpage List Widget
+ * Register the RDK Subpage List Widget
  */
-if(!function_exists('rdx_subpage_list_widget_register')) {
-	function rdx_subpage_list_widget_register() {
-		if(class_exists('RDXSubpageWidget')) register_widget('RDXSubpageWidget');
+if(!function_exists('rdk_subpage_list_widget_register')) {
+	function rdk_subpage_list_widget_register() {
+		if(class_exists('RDKSubpageWidget')) register_widget('RDKSubpageWidget');
 	}
 	
-	add_action("widgets_init", 'rdx_subpage_list_widget_register');
+	add_action("widgets_init", 'rdk_subpage_list_widget_register');
 }

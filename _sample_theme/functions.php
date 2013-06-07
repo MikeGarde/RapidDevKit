@@ -141,10 +141,17 @@ SHORT CODES
 ----------------------------------------
 */
 // add your short codes here.
-function my_shortcode() {
-	//add your short code info here.
+function shortcode_function($atts, $content=null) {
+	// array of supported pairs and their defaults
+	extract(shortcode_atts(array(  
+		"to" => 'http://net.tutsplus.com'  
+	), $atts)); // passed pairs
+	
+	$result = '';
+	
+	return $result;
 }
-//add_shortcode('my_shortcode', 'my_shortcode');
+//add_shortcode('short_code_name', 'shortcode_function');
 /*
 ----------------------------------------
 END SHORT CODES
