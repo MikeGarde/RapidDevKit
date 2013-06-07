@@ -12,4 +12,3 @@ $load_classes = array(
 	'models' => array('article', 'slide'),
 	'helpers' => array() // 'time', 'option', 'meta'
 );
-// new comment
