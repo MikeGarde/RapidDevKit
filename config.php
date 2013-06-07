@@ -11,4 +11,4 @@ helpers: html, text, tool
 $load_classes = array(
 	'models' => array('article', 'slide'),
 	'helpers' => array() // 'time', 'option', 'meta'
-);
+); 
