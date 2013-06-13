@@ -67,14 +67,10 @@
 <?php if($wp_query->max_num_pages > 1): ?>
 <div id="nav-below" class="navigation">
 	<hr>
-	<div class="pull-left">
-		<?php previous_posts_link('<span class="meta-nav">&laquo;</span> Prev'); ?>
-		
-	</div>
-	<div class="pull-right">
-		<?php next_posts_link('Next <span class="meta-nav">&raquo;</span>'); ?>
-	</div>
-	<div class="clear"></div>
+	<?php
+	global $rdk;
+	$rdk->Tool->pagination();
+	?>
 	<hr>
 </div><!-- #nav-below -->
 <?php endif; ?>
