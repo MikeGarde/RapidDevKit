@@ -118,10 +118,22 @@ class Html extends Helper {
 			if(!$w)	$w = round(($h / $o_height) * $o_width);
 			else	$h = round(($w / $o_width) * $o_height);
 		}
-		
-		$new_filename = $w . 'x' . $h . '-' . $q . '_' . filesize($file_path) . basename($src);
+
+		$file_hash = md5(filesize($file_path) . basename($src));
+		$file_ext  = pathinfo($src, PATHINFO_EXTENSION);
+		$new_filename  = $file_hash .'_'.$w .'x'. $h .'_'. $q .'.'. $file_ext;
 		$new_file_path = RDK_DIR_CACHE . $new_filename;
-		
+
+		if(preg_match("/^http(s)?:\/{2}/", $file_path)) {
+			$cache_remote = $dir_cache . $file_hash .'.'. $file_ext;
+
+			if(!file_exists($cache_remote))
+				copy($file_path, $cache_remote);
+
+			$file_path = $cache_remote;
+			unset($cache_remote);
+		}
+
 		if(!file_exists($new_file_path)) {
 			include_once(RDK_DIR_LIBS . 'GDImage.php');
 			$img = new GDImage($file_path);
